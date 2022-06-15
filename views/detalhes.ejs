@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%-include('./components/head')%>
+
+<body>
+    <header>
+        <h1>Modelos de Unhas</h1>
+        <%-include('./components/nav')%>
+    </header>
+    <main>
+        <div class="container">
+            <div class="unhas">
+                <img src="<%= unhas.imagem %>" alt="capa do Unhas">
+            </div>
+            
+            <div class="detalhes">
+                <h2><%= unhas.nome %></h2>
+                <p><%= unhas.caracteristicas %></p>
+                <a href="/editar/<%= unhas.id %>">editar</a>
+                <a href="/deletar/<%= unhas.id %>">excluir</a>
+            </div>
+        </div>
+    </main>
+    
+        <%-include('./components/footter')%>
+    <script src="/JS/script.js"></script>
+</body>
+</html>

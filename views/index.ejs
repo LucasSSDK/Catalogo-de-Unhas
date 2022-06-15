@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <%-include('./components/head')%>
+
+
+  <body>
+   <%-include('./components/nav')%>
+
+    
+    <header> <!--inicio da pagina-->
+      <article>
+        
+        <h2>Modelos para Estilização de Unhas</h2>
+        <p> Para você que está em duvida, antes de ir na sua manicure e esclher o modelo ideal para suas Unhas, este catalogo pode te ajudar a decidir</p>
+      </article>
+      <img src="/img/unhas2.gif" class="banner" alt="banner">
+      
+      
+    </header>
+
+
+    
+    <main>
+      <section id="img1">
+        <img src="/img/formatos-de-Unhas.webp" alt="">
+      </section>
+
+      <section id="cards"> <!--inicio dos estilos-->
+
+        <% unhas.forEach((Unhas) => { %>
+
+
+        
+          <div class="card">
+
+            
+            <h3><%= unhas.estilo%></h3>
+            
+            <a href="/detalhes/<%= Unhas.id %>"
+              ><img src="<%= Unhas.imagem %>" alt="Imagem" ></a>
+             
+
+
+              <a id="btnEditar" href="/editar/<%= Unhas.id %>">Editar</a>
+
+              <a id="apagar" href="/deletar/<%= Unhas.id %>">Deletar</a>
+
+              <a id="btnDetalhes" href="/detalhes/<%= Unhas.id %>">Detalhes</a>
+
+          </div>
+      
+        <% }) %>
+  
+      </section>
+
+      <a id="btnDetalhes" href="/criar">Cadastre um estilo</a>
+
+
+    </main>
+
+    <%-include('./components/footter')%>
+
+    <script src="/js/script.js"></script>
+
+  </body>
+</html>
+
+
+
+ 

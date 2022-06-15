@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <%- include('./components/head') %>
+
+  <body>
+    <header>
+      <h1>Modelos de Unhas</h1>
+      <%- include('./components/nav') %>
+    </header>
+
+    <section id="cadastro">
+      <!--adicionar novos estilos-->
+
+      <h2>Adicione um novo estilo de Unha</h2>
+
+      <form action="/criacao" method="POST" onsubmit="adicionar()">
+        <label for="estilo">Estilo: </label>
+        <input
+          type="text"
+          name="estilo"
+          id="estilo"
+          placeholder="Digite o estilo de Unhas"
+          required
+        />
+
+        <label for="imagem">Link da Imagem: </label>
+        <input
+          type="imagem"
+          name="imagem"
+          id="imagem"
+          placeholder="Link da imagem da Unhas"
+          required
+        />
+
+        <label for="caracteristicas">Caracteristicas: </label>
+        <input
+          type="text"
+          name="caracteristicas"
+          id="caracteristicas"
+          placeholder="Digite as caracteriscas do estilo"
+          required
+        />
+
+        <button id="btnCadastrar" type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <%-include('./components/footter')%>
+
+    <script src="js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

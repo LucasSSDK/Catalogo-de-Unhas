@@ -1,0 +1,32 @@
+{
+  "name": "catalogo-de-unhas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasSSDK/Catalogo-de-Unhas.git"
+  },
+  "author": "Lucas SS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasSSDK/Catalogo-de-Unhas/issues"
+  },
+  "homepage": "https://github.com/LucasSSDK/Catalogo-de-Unhas#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "i": "^0.3.7",
+    "nodemon": "^2.0.16",
+    "npm": "^8.12.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "pnpm": "^7.2.1",
+    "sequelize": "^6.20.1"
+  }
+}

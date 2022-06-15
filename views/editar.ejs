@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%-include('./components/head')%>
+
+<body>
+    <header>
+        <h1>Modelo de Unhas</h1>
+        <%-include('./components/nav')%>
+    </header>
+    
+    <main>
+
+        <div class="container">
+            <span><% if(message != ""){ message } %></span>
+            <form method="POST" action="/editar/<%= unhas.id %>">
+                <div class="item">
+                    <input type="text" placeholder="Digite o nome do modelo da Unha" name="nome" value="<%= unhas.nome %>" required>
+                </div>
+                <div class="item">
+                    <textarea placeholder="Digite a descrição da Unha" name="caracteristicas" ><%= unhas.caracteristicas %></textarea>
+                </div>
+                <div class="item">
+                    <input type="text" placeholder="Digite a URL da capa" name="imagem" value="<%= unhas.imagem %>" required>
+                </div>
+                <div class="item">
+                    <Button type="submit">Salvar alteração</Button>
+                </div>
+                <!-- <input type="hidden" id="teste" name="teste"> -->
+            </form>
+        </div>
+
+        </main>
+  
+        <%-include('./components/footter')%>
+
+    <script src="/JS/script.js"></script> 
+</body>
+</html>
