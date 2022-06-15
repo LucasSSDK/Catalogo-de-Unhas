@@ -85,7 +85,7 @@ const editar = async (req,res) => {
         unhas.caracteristicas = caracteristicas;
         unhas.imagem = imagem;
 
-        const unhasEditadas = await Unhas.save();
+        const unhasEditadas = await unhas.save();
        
         res.redirect("/");
     }catch(err){//deu erro, venha nesse caminho

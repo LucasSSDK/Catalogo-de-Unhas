@@ -34,9 +34,9 @@ const Unhas = database.sequelize.define(
 
 );
 const initTable = async () =>{
-    await Unhas.sync();
-  }
-  
-  initTable();
+  await Unhas.sync();
+}
+
+initTable();
 
 module.exports = Unhas; //exportar o Unhas
