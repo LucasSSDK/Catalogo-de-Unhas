@@ -34,7 +34,7 @@ const Unhas = database.sequelize.define(
 
 );
 const initTable = async () =>{
-    await Tshirt.sync();
+    await Unhas.sync();
   }
   
   initTable();
